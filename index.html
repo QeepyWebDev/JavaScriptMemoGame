@@ -41,9 +41,9 @@
         <section class="products" id="memory">
             <h1>Memory</h1>
             <div class="contact__content">
-            <div class="wrapper">
+            <div class="wrapper" id="gameBoard">
                 <ul class="cards">
-                  <li class="card">
+                  <li class="card" data-card="memoCard1">
                     <div class="view front-view">
                       <img class="img-front" src="img/qmark.png" alt="icon">
                     </div>
@@ -51,55 +51,55 @@
                       <img  class="img-back" id="img6" src="img/img6.jpg" alt="card-img">
                     </div>
                   </li>
-                  <li class="card">
+                  <li class="card" data-card="memoCard2">
                     <div class="view front-view">
                       <img class="img-front"   src="img/qmark.png" alt="icon">
                     </div>
-                    <div class="view back-view">
+                    <div class="view back-view" style="display: none;">
                       <img class="img-back" id="img1" src="img/img1.jpg" alt="card-img">
                     </div>
                   </li>
-                  <li class="card">
-                    <div class="view front-view" style="display: none;">
+                  <li class="card" data-card="memoCard3">
+                    <div class="view front-view">
                       <img src="img/qmark.png" alt="icon">
                     </div>
-                    <div class="view back-view">
+                    <div class="view back-view" style="display: none;">
                       <img src="img/img3.jpg" id="img3" alt="card-img">
                     </div>
                   </li>
-                  <li class="card">
+                  <li class="card" data-card="memoCard4">
                     <div class="view front-view">
                       <img src="img/qmark.png" alt="icon">
                     </div>
-                    <div class="view back-view">
+                    <div class="view back-view" style="display: none;">
                       <img src="img/img2.jpg" id="img2" alt="card-img">
                     </div>
                   </li>
-                  <li class="card">
-                    <div class="view front-view" style="display: none;">
-                      <img src="img/qmark.png" alt="icon">
-                    </div>
-                    <div class="view back-view">
-                      <img src="img/img6.jpg" alt="card-img">
-                    </div>
-                  </li>
-                  <li class="card">
+                  <li class="card" data-card="memoCard1">
                     <div class="view front-view">
                       <img src="img/qmark.png" alt="icon">
                     </div>
-                    <div class="view back-view">
-                      <img src="img/img2.jpg" alt="card-img">
+                    <div class="view back-view" style="display: none;">
+                      <img src="img/img6.jpg" id="img6-6" alt="card-img">
                     </div>
                   </li>
-                  <li class="card">
+                  <li class="card" data-card="memoCard4">
                     <div class="view front-view">
                       <img src="img/qmark.png" alt="icon">
                     </div>
-                    <div class="view back-view">
+                    <div class="view back-view" style="display: none;">
+                      <img src="img/img2.jpg" id="img2-2" alt="card-img">
+                    </div>
+                  </li>
+                  <li class="card" data-card="memoCard5">
+                    <div class="view front-view">
+                      <img src="img/qmark.png" alt="icon">
+                    </div>
+                    <div class="view back-view" style="display: none;">
                       <img src="img/img4.jpg" id="img4" alt="card-img">
                     </div>
                   </li>
-                  <li class="card">
+                  <li class="card" data-card="memoCard6">
                     <div class="view front-view">
                       <img src="img/qmark.png" alt="icon">
                     </div>
@@ -107,42 +107,48 @@
                       <img src="img/img5.jpg" id="img5" alt="card-img">
                     </div>
                   </li>
-                  <li class="card">
+                  <li class="card" data-card="memoCard3">
                     <div class="view front-view">
                       <img src="img/qmark.png" alt="icon">
                     </div>
                     <div class="view back-view" style="display: none;">
-                      <img src="img/img3.jpg" alt="card-img">
+                      <img src="img/img3.jpg" id="img3-3" alt="card-img">
                     </div>
                   </li>
-                  <li class="card">
+                  <li class="card" data-card="memoCard2">
                     <div class="view front-view">
                       <img src="img/qmark.png" alt="icon">
                     </div>
                     <div class="view back-view" style="display: none;">
-                      <img src="img/img1.jpg" alt="card-img">
+                      <img src="img/img1.jpg" id="img1-1" alt="card-img">
                     </div>
                   </li>
-                  <li class="card">
+                  <li class="card" data-card="memoCard5">
                     <div class="view front-view">
                       <img src="img/qmark.png" alt="icon">
                     </div>
                     <div class="view back-view" style="display: none;">
-                      <img src="img/img4.jpg" alt="card-img">
+                      <img src="img/img4.jpg" id="img4-4" alt="card-img">
                     </div>
                   </li>
-                  <li class="card">
-                    <div class="view front-view" style="display: none;">
+                  <li class="card" data-card="memoCard6">
+                    <div class="view front-view">
                       <img src="img/qmark.png" alt="icon">
                     </div>
-                    <div class="view back-view">
-                      <img src="img/img5.jpg" alt="card-img">
+                    <div class="view back-view" style="display: none;">
+                      <img src="img/img5.jpg" id="img5-5" alt="card-img">
                     </div>
                   </li>
                   <div class="details">
-                    <p class="time">Tid: <span><b>30</b>s</span></p>
-                    <p class="flips">Antal: <span><b>0</b></span></p>
-                    <button>Starta om</button>
+                    <label for="timerDropdown">Välj tid:</label>
+                    <select id="timerDropdown" onchange="updateTimer()">
+                        <option value="15">15s</option>
+                        <option value="30">30s</option>
+                        <option value="60">60s</option>
+                    </select>
+                    <p class="flips">Antal: <span id="score"><b>0</b></span></p>
+                    <p class="time">Tid kvar: <span id="timer"><b>30</b>s</span></p>
+                    <button id="restart">Starta om</button>
                   </div>
                 </ul>
               </div>
@@ -155,6 +161,6 @@
     <footer>
         (C) Stefan
     </footer>
-    <script src="script.js" defer></script>
+    <script src="script2.js" defer></script>
 </body>
 </html>
